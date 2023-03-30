@@ -1,0 +1,187 @@
+
+
+
+.card-img-top{
+    width: 70px;
+    height: 70px; 
+   
+}
+.container{
+.card{
+width: max-content;
+display: flex;
+flex-direction: row;
+
+ }
+}
+.container{
+display: flex;
+justify-content: space-between;
+}
+
+.container1{
+display: flex;
+justify-content: space-between;
+}
+
+.container3{
+display: flex;
+justify-content: space-between;
+}
+
+.fea-product{
+display: flex;
+justify-content: space-between; 
+.feature{
+display: flex;
+float: left;
+column-gap: 20px;
+  
+}
+
+}
+.call{
+display: flex;
+justify-content: space-between; 
+.call1{
+display: flex;
+float: left;
+column-gap: 20px;
+  
+}
+}
+
+.img{
+    width: 100%;
+    height: 150px;
+}
+
+.padding{
+    margin-left: 10px;
+}
+
+.centre{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+.btn{
+    margin-right: 20px;
+}
+
+a:hover{
+    background-color: rgb(40, 186, 159);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+  
+}
+
+
+
+.container{
+    margin-top:200px ;
+}
+
+.top{
+    margin-top: 20px;
+}
+
+del{
+    color: red;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.call{
+    display: flex;
+    justify-content: space-between; 
+    .call1{
+    display: flex;
+    float: left;
+    column-gap: 20px;
+    
+}
+}
+.image {
+   height: 300px;
+   width: 100%;
+   opacity: .3
+ 
+}
+.h4{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 100px;
+    font-size: 80px;
+}
+
+
+
+
+
+
+
+.container{
+display: flex;
+justify-content: space-between;
+text-align: center;
+margin-top: 100px;
+height: auto;
+
+}
+
+.card{
+margin-left: 10px;
+
+}
+
+.img{
+width: 100%;
+height: 150px;
+}
+
+
+a{
+text-decoration: none;
+cursor: pointer;
+color: black;
+}
+
+del{
+color: red;
+margin-left: 5px;
+}
+
+
+// filter btn
+
+.filterButton{
+float: right;
+margin-right: 112px;
+}
+
+
+.containerx{
+display: flex;
+justify-content: space-between;
+text-align: center;
+margin-top: 100px;
+height: auto;
+
+}

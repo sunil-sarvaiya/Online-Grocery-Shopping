@@ -1,0 +1,97 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "registration": [
+    {
+      "fname": "ssssss",
+      "lname": "SQSSSSS",
+      "email": "saass@dass",
+      "phone": 9999999999,
+      "password": "77777777",
+      "id": 1
+    },
+    {
+      "fname": "ssssss",
+      "lname": "SQSSSSS",
+      "email": "saass@dass",
+      "phone": 9999999999,
+      "password": "77777777",
+      "id": 2
+    },
+    {
+      "fname": "sunil",
+      "lname": "sarvaiya",
+      "email": "sarvaiya@GMAH",
+      "phone": 7894561237,
+      "password": "sadasadd",
+      "id": 3
+    },
+    {
+      "fname": "wsfghj",
+      "lname": "fgnhj",
+      "email": "dsdsd@dffd",
+      "phone": 5555555551,
+      "password": "555555555",
+      "id": 4
+    },
+    {
+      "fname": "sss",
+      "lname": "sss",
+      "email": "ssss@ddd",
+      "phone": 4545445445,
+      "password": "5545454545",
+      "id": 5
+    },
+    {
+      "fname": "sssxssss",
+      "lname": "sqwsadd",
+      "email": "ddds@ddfdf",
+      "phone": 7878878787,
+      "password": "88888888",
+      "id": 6
+    },
+    {
+      "fname": "ndjdjnd",
+      "lname": "jnjndjndj",
+      "email": "jndjnj@nvkjnkj",
+      "phone": 7878787878,
+      "password": "787888454",
+      "id": 7
+    },
+    {
+      "fname": "parag",
+      "lname": "parmar",
+      "email": "parag@gmail.com",
+      "phone": 9909006780,
+      "password": "parag333",
+      "id": 8
+    }
+  ],
+  "login": [],
+  "cart": [
+    {
+      "category": "Fruit",
+      "name": "orange",
+      "quantity": 500,
+      "product_quantity": 7,
+      "price": 2,
+      "img": "/assets/orange.jpeg",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+body {
+    background: #eecda3;
+    background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
+    background: linear-gradient(to right, #eecda3, #ef629f);
+    min-height: 100vh;
+  }
+
+
+  
+
+.image {
+    height: 300px;
+    width: 100%;
+    opacity: .3
+  
+ }
+
+ .h4{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 100px;
+    font-size: 80px;
+    // text-align: center;
+}
+
+.count{
+padding: 40px;
+
+
+}
+.quantity{
+  margin-left: 25px;
+}

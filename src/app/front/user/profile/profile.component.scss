@@ -1,0 +1,62 @@
+.call{
+    display: flex;
+    justify-content: space-between; 
+    .call1{
+    display: flex;
+    float: left;
+    column-gap: 20px;
+    
+}} 
+
+.image {
+    height: 300px;
+    width: 100%;
+    opacity: .3
+  
+ }
+
+ .h4{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 100px;
+    font-size: 80px;
+    // text-align: center;
+}
+
+a:hover{
+    background-color: rgb(40, 186, 159);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+  
+}
+.btn-lg{
+    color: white;
+    border: none;
+    background-color: rgb(117, 217, 162);
+}
+
+
+
+
+// form
+
+
+label {
+    font-weight: 600;
+    color: #666;
+}
+
+
+.container{
+    border: 1px solid black;
+    padding: 50px;
+    width: 700px;
+    height: auto;
+}
+
+.btnn{
+    margin-left: 520px;
+    background-color: rgb(117, 217, 162);
+
+}

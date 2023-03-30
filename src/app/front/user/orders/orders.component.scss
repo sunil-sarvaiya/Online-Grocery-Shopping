@@ -1,0 +1,24 @@
+.call{
+    display: flex;
+    justify-content: space-between; 
+    .call1{
+    display: flex;
+    float: left;
+    column-gap: 20px;
+    
+}} 
+
+.image {
+    height: 300px;
+    width: 100%;
+    opacity: .3
+  
+ }
+
+ .h4{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 100px;
+    font-size: 80px;
+    // text-align: center;
+}

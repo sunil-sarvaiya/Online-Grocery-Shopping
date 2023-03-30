@@ -1,0 +1,28 @@
+
+<div class="login-page">
+    <div class="form">
+      <div class="login">
+        <div class="login-header">
+          <h3>LOGIN</h3>
+        </div>
+      </div>
+
+        <form  [formGroup]="registrationForm" class="login-form">
+
+              <input type="email" placeholder="email" formControlName="email">
+              <span *ngIf="email && email.invalid && email.touched" class="span">Please enter valid value!</span>
+            
+            
+              <input type="password" placeholder="Password" formControlName="password">
+              <span *ngIf="password && password.invalid && password.touched" class="span">Please enter valid value!</span>
+            
+              <a routerLink="/"><button [disabled]="registrationForm.invalid" (click)="login(registrationForm.value)">Log in</button></a><br><br>
+            
+              <a routerLink="/front/user/registration" class="msg">Create an account</a>
+      
+      </form>
+    </div>
+  </div>
+
+
+ 

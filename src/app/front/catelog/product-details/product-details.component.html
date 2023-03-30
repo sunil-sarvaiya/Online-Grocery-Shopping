@@ -1,0 +1,36 @@
+<!-- <div *ngFor="let item of products">
+    <div>{{item.name}}</div>
+</div> -->
+
+
+
+  
+<div class="containerx">
+    <div class="card" style="width: 18rem;" *ngFor="let data of products">
+
+   <img src="{{data.img}}" class="card-img-top img" alt="..."> 
+  
+      
+        <div class="card-body">
+          <p class="card-text"> <b>Category: </b> {{data.category}}</p>
+          <p class="card-title"><b>Name: </b> {{data.name}}</p><br>
+          <p class="card-title"><b>Weight: </b>{{data.quantity}} gm</p>
+          <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span><br> 
+            <p style="margin-top: 10px;"><b>Price: </b> ${{data.price * numberData}}  <del>{{data.price*numberData*2}}</del><br></p>
+
+            <button class="btn btn-primary" (click)="submit()" *ngIf="!isAddToCart">Add to cart</button><br><br>
+
+            <button class="btn btn-primary" routerLink="/front/cart" *ngIf="isAddToCart"> Go to cart</button>
+
+            <!-- <a href="#" class="btn btn-primary">Buy Now</a><br><br> -->
+
+            <!-- <button (click)="minusValue()">-</button> Product Count: {{numberData}} <button (click)="plusValue()">+</button> -->
+
+            
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,58 @@
+
+
+<div class="mainDiv">
+    <div class="form">
+      <div class="login">
+          <h3>REGISTRATION</h3>
+      </div>
+      
+      <form  [formGroup]="registrationForm" class="login-form"  (ngSubmit)="submit()">
+  
+          <input type="text" placeholder="First name" formControlName="fname">
+          <span *ngIf="fname && fname.invalid && fname.touched" class="span">Please enter valid value!</span>
+        
+        
+          <input type="text" placeholder="Last name" formControlName="lname">
+          <span *ngIf="lname && lname.invalid && lname.touched" class="span">Please enter valid value!</span>
+        
+        
+          <input type="email" placeholder="Email" formControlName="email">
+          <span *ngIf="email && email.invalid && email.touched" class="span">Please enter valid value!</span>
+        
+          
+          <input type="tel" placeholder="phone" class="input"  formControlName="phone">
+          <span *ngIf="phone && phone.invalid && phone.touched" class="span">Please enter valid value!</span>
+        
+        
+          <input type="password" placeholder="Password" formControlName="password">
+          <span *ngIf="password && password.invalid && password.touched" class="span">Please enter valid value!</span>
+
+          <input type="text" placeholder="username" formControlName="username" >
+          <span *ngIf="username && username.invalid && username.touched" class="span">Please enter valid value!</span>
+
+
+        
+        
+          <!-- <input type="text" placeholder="Confirm Password" formControlName="cpassword"> 
+        
+   -->
+  
+     <button type="submit" [disabled]="registrationForm.invalid" >Log in</button><br><br>
+  
+  
+         <a routerLink="/front/user/login" class="msg">Already have account?</a>
+  
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
