@@ -1,80 +1,76 @@
 
 
+<div class=" sticky-top">
+
+
+
+  
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mb-5">
-    <div class="container-fluid">
-  
-      <a routerLink=""><img src="/assets/logo.png" alt="**" class="logo"></a>
-      
-  
-  
-      <div class="left">
-  <p class="p1">Cybercom Creation</p>
-  <p class="p2">GROCERY SHOPPING APP</p>
-  
-      </div>
-  
-  
-  
-  <div class="right">
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        
-        <form class="d-flex search" role="search" >
-          <input class="form-control me-2 input " type="search" placeholder="Search for items...." aria-label="Search">
-          <button class="btn btn-outline-success logIn" type="submit">Search</button>
-          <a routerLink="/contact-us" class="btn btn-outline-success logIn">Contact Us</a>
-          <a routerLink="/about-us"class="btn btn-outline-success logIn" >About Us</a>
-          <a routerLink="./front/cart"class="btn btn-outline-success logIn" >My cart</a>
-          <a routerLink="/front/user/login"class="btn btn-outline-success logIn"  >Log-in</a>
-  
-  
-  
-            
-      </form>
-  
+  <div class="container-fluid">
+
+    <a routerLink=""><img src="/assets/logo.png" alt="**" class="logo"></a>
     
+
+
+    <div class="left">
+<p class="p1">Cybercom Creation</p>
+<p class="p2">GROCERY SHOPPING APP</p>
+
+    </div>
+
+
+
+<div class="right">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <form class="d-flex search" role="search" >
+        <input class="form-control me-2 input " type="search" placeholder="Search for items...." aria-label="Search">
+        <button class="btn btn-outline-success logIn" type="submit">Search</button>
+        <a routerLink="/contact-us" class="btn btn-outline-success logIn">Contact Us</a>
+        <a routerLink="/about-us"class="btn btn-outline-success logIn" >About Us</a>
+        <a routerLink="./front/cart"class="btn btn-outline-success logIn" >My cart</a>
+        <!-- <a routerLink="/front/user/login"class="btn btn-outline-success logIn" *ngIf="showName">{{btn}}</a> -->
+        <button class="btn btn-outline-success logIn" (click)="navigate()">{{btnText}}</button>
+
+        <!-- <a routerLink="/front/user/login"class="btn btn-outline-success logIn" *ngIf="!showName">{{loadData()}}</a> -->
+
+
+
+
+          
+    </form>
+
   
-  
-  
-  
-  
-  
-  </div>
-  </div>
-  </div>
-  </nav>
-  
-  <!-- button -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</nav>
+
+<!-- button -->
 
 
 <div class="call ">
-    
-  <a routerLink="/front/catelog/category">  <button type="button" class="btn btn-primary btn-lg" ><i class="bi bi-grid"></i>Brows All Categories</button>  </a>
-  <div class="call1">
-      <h3><i class="bi bi-telephone"></i> 9327000837</h3>24/7 support center
-  </div>
+  
+<a routerLink="/front/catelog/category">  <button type="button" class="btn btn-primary btn-lg" ><i class="bi bi-grid"></i>Brows All Categories</button>  </a>
+<div class="call1">
+    <h3><i class="bi bi-telephone"></i> 9327000837</h3>24/7 support center
+</div>
 </div>
 
 
-  <!-- 
-  <nav>
-      <img src="/assets/1.jpg" alt="">
-  
-      <ul>
-          <li><a routerLink="" class="a">EVERYTHING</a></li>
-          <li><a routerLink="" class="a">WOMEN</a></li>
-          <li><a routerLink="" class="a">MEN</a></li>
-          <li><a routerLink="/about-us" routerLinkActive="active" class="a">ABOUT-US</a></li>
-          <li><a routerLink="/contact-us" routerLinkActive="active" class="a">CONTACT-US</a></li>
-          <li><a routerLink="/cart" routerLinkActive="active" class="cart">CART</a></li>
-          <li class="login"><a routerLink="/user" routerLinkActive="active">LOG-IN</a></li>  
-  
-          </ul>
-  </nav>
-  
-  -->
-  
-  
+
+
+
+
+
+</div>

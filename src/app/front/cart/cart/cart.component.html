@@ -17,7 +17,7 @@
   
             <!-- Shopping cart table -->
             <div class="table-responsive">
-              <!-- <table class="table">
+              <table class="table">
                 <thead>
                   <tr>
 
@@ -43,134 +43,50 @@
 
                   </tr>
                 </thead>
-                <tbody> -->
+                <tbody>
 
-
-<!-- 
-                  <tr>
-                    <th scope="row" class="border-0">
-                      <div class="p-2">
-                        <img src="https://bootstrapious.com/i/snippets/sn-cart/product-1.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-                        <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle ">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td class="border-0 align-middle"><strong>$79.00</strong></td>
-                    <td class="count"><button (click)="minusValue()">-</button> <strong> {{ numberData}}  </strong> <button (click)="plusValue()">+</button></td>
-                    <td class="border-0 align-middle"><strong>${{79*numberData}}</strong> </td>
-                    <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-                  </tr> -->
-
-
-
-
-
-
-
-
-
-                  <!-- extra -->
-
-                  <table class="table">
-                    <thead>
-                      <tr >
-                        <th scope="col">Item Description</th>
-                        <th scope="col">Unit Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Sub Total</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let p_details of cartData;let i=index">
-                        <td>{{p_details.quantity}}g  {{p_details. name}}</td>
-                        <td>{{p_details.price |currency }}</td>
-                        <td> <div>
-                          
-                          <button class="btn" (click)="subQuantity(p_details.id,i)">-</button>
-                            <span>{{p_details.product_quantity}}</span>
-                            <button class="btn" (click)="addQuantity(p_details.id,i)">+</button>
-                    </div></td>
-                    <td>{{p_details.product_quantity * p_details.price}}</td>
-                    <td>
-                       <i type="button" class="fa-solid fa-trash" (click)="delCartData(p_details.id)"></i>
-                    </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-
-
-
-
-                  <div class="d-flex justify-content-end">
-                    <div class="card" style="width: 18rem;">
-                       <table class="table">
-                    <tr>
-                    <th>Sub TOTAL</th>
-                    <th>{{total()}}</th>
-                  </tr>
-                  <tr>
-                    <th>Delivary Charges</th>
-                    <th>Free</th>
-                  </tr>
-                  <tr>
-                    <th>Grand Total</th>
-                    <th>{{total()}}</th>
-                  </tr>
-                  </table>
-                  <a routerLink="/cart/checkout" class="btn btn-primary">Checkout</a>
-                      </div>
-                    </div>
-                
-                
-
-                  
-
-
-
-<!--                   
-                  <tr>
+                     
+                  <tr *ngFor="let item of cartData;let i=index">
                     <th scope="row">
                       <div class="p-2">
-                        <img src="https://bootstrapious.com/i/snippets/sn-cart/product-2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                        <img src="{{item.img}}" alt="" width="70" class="img-fluid rounded shadow-sm">
                         <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
+                          <h5 class="mb-0"><a href="#" class="text-dark d-inline-block"> {{item. name}} -  {{item.quantity}} gm</a></h5><span class="text-muted font-weight-normal font-italic">Category: {{item.category}}</span>
                         </div>
                       </div>
                     </th>
-                    <td class="align-middle"><strong>$79.00</strong></td>
-                    <td class="count"><button (click)="minusValue()">-</button> <strong> {{ numberData}}  </strong> <button (click)="plusValue()">+</button></td>
-                    <td class="border-0 align-middle"><strong>${{79*numberData}}</strong> </td>
-                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+
+                    <td class="align-middle"><strong>{{item.price |currency }} </strong> </td>
+
+
+
+                    <td class="count"> <div>
+                          
+                      <button class="btn" (click)="subQuantity(item.id,i)">-</button>
+                        <span>{{item.product_quantity}}</span>
+                        <button class="btn" (click)="addQuantity(item.id,i)">+</button>
+                </div></td>
+
+
+                    <td class="border-0 align-middle"><strong>${{item.product_quantity * item.price}}</strong> </td>
+
+                    <td class="align-middle"> <i type="button" class="fa-solid fa-trash" (click)="delCartData(item.id)"></i>
                     </td>
                   </tr>
-                  <tr> -->
+                  <tr> 
 
 
-                    <!-- <th scope="row">
-                      <div class="p-2">
-                        <img src="https://bootstrapious.com/i/snippets/sn-cart/product-3.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-                        <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a></h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
-                        </div>
-                      </div>
-                      <td class="align-middle"><strong>$79.00</strong></td>
-                      <td class="count"><button (click)="minusValue()">-</button> <strong> {{ numberData}}  </strong> <button (click)="plusValue()">+</button></td>
 
-                    <td class="border-0 align-middle"><strong>${{79*numberData}}</strong> </td>
-                      <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                      </td>
-                  </tr> -->
-                <!-- </tbody>
-              </table> -->
+
+                
+
+                </tbody>
+              </table>
             </div>
-            <!-- End -->
+         
           </div>
         </div>
-<!--   
+ 
         <div class="row py-5 p-4  rounded shadow-sm">
           <div class="col-lg-6">
           </div>
@@ -178,16 +94,16 @@
             <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold text-center">Order summary </div>
             <div class="p-4">
               <ul class="list-unstyled mb-4">
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Delivary-Charge</strong><strong>$10.00</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>${{total()}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Delivary-Charge</strong><strong>Free</strong></li>
                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                  <h5 class="font-weight-bold">$400.00</h5>
+                  <h5 class="font-weight-bold">${{total()}}</h5>
                 </li>
-              </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block ">Procceed to checkout</a>
+              </ul><a routerLink="/front/cart/checkout" class="btn btn-primary checkout">Checkout</a>
             </div>
           </div>
-        </div> -->
+        </div> 
   
       </div>
     </div>

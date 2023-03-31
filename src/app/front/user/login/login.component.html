@@ -7,16 +7,16 @@
         </div>
       </div>
 
-        <form  [formGroup]="registrationForm" class="login-form">
+        <form  [formGroup]="loginForm" class="login-form">
 
-              <input type="email" placeholder="email" formControlName="email">
-              <span *ngIf="email && email.invalid && email.touched" class="span">Please enter valid value!</span>
+              <input type="text" placeholder="username" formControlName="username">
+              <span *ngIf="username && username.invalid && username.touched" class="span">Please enter valid value!</span>
             
             
               <input type="password" placeholder="Password" formControlName="password">
               <span *ngIf="password && password.invalid && password.touched" class="span">Please enter valid value!</span>
             
-              <a routerLink="/"><button [disabled]="registrationForm.invalid" (click)="login(registrationForm.value)">Log in</button></a><br><br>
+              <button [disabled]="loginForm.invalid" (click)="login()">Log in</button><br><br>
             
               <a routerLink="/front/user/registration" class="msg">Create an account</a>
       

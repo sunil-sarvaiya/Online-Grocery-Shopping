@@ -1,8 +1,3 @@
-<!-- <div *ngFor="let item of products">
-    <div>{{item.name}}</div>
-</div> -->
-
-
 
   
 <div class="containerx">
@@ -22,7 +17,7 @@
             <span class="fa fa-star unchecked"></span><br> 
             <p style="margin-top: 10px;"><b>Price: </b> ${{data.price * numberData}}  <del>{{data.price*numberData*2}}</del><br></p>
 
-            <button class="btn btn-primary" (click)="submit()" *ngIf="!isAddToCart">Add to cart</button><br><br>
+            <button class="btn btn-primary" (click)="submit()" *ngIf="!isAddToCart">Add to cart</button>
 
             <button class="btn btn-primary" routerLink="/front/cart" *ngIf="isAddToCart"> Go to cart</button>
 

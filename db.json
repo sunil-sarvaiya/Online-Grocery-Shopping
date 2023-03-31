@@ -85,13 +85,22 @@
   "login": [],
   "cart": [
     {
+      "category": "vagetable",
+      "name": "carrot",
+      "quantity": 500,
+      "product_quantity": 1,
+      "price": 2,
+      "img": "/assets/carrot.png",
+      "id": 8
+    },
+    {
       "category": "Fruit",
       "name": "orange",
       "quantity": 500,
-      "product_quantity": 7,
+      "product_quantity": 1,
       "price": 2,
       "img": "/assets/orange.jpeg",
-      "id": 1
+      "id": 9
     }
   ]
 }

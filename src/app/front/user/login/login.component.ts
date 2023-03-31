@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FrontService } from 'src/app/shared/services/front.service';
 import { compileNgModule } from '@angular/compiler';
+import { UserModel } from 'src/app/model/user-model';
+import { login } from 'src/app/model/login';
+
 
 
 @Component({
@@ -19,29 +22,54 @@ export class LoginComponent implements OnInit {
   constructor(private http:HttpClient , private router:Router, private user:FrontService){}
 
   
-  registrationForm = new FormGroup({
+  loginForm = new FormGroup({
 
-    email: new FormControl('',[Validators.required,Validators.email]),
+    username: new FormControl('',[Validators.required]),
     password: new FormControl('',[Validators.required, Validators.minLength(8)]),
   })
 
   
-  get email(){
-    return this.registrationForm.get('email')
+  get username(){
+    return this.loginForm.get('username')
   };
 
   
   get password(){
-    return this.registrationForm.get('password')
+    return this.loginForm.get('password')
   };
 
   
-  login(data:any){
-    console.log(data);
+  login(){
+    // console.log(data);
 
-     this.user.login(data).subscribe(res=>{
-      console.log(res);
-     })
+    //  this.user.login(data).subscribe(res=>{
+    //   console.log(res);
+    //  })
+    const data=this.loginForm.getRawValue();
+    console.log("data",data)
+   
+  let body={
+    username:data.username,
+    password:data.password,
+  };
+ console.log(body);
+  
+ this.user.login(body).subscribe((result)=>{
+  console.log(result);
+  alert("login");
+  this.loginForm.reset();
+  localStorage.setItem("username",JSON.stringify(body.username)) ;
+  this.router.navigate(['/']);
+
+
+
+ 
+
+
+
+  
+ })
+}}
 
     
 //     this.http.get<any>("http://localhost:3000/usersignup").subscribe(res=>{
@@ -57,5 +85,3 @@ export class LoginComponent implements OnInit {
 //         this.router.navigate(['/']);
 // }
 //   });
-
-  }}

@@ -8,7 +8,14 @@ const routes: Routes = [
   
   // {path:'',redirectTo:'home',pathMatch:'full'},  
   // {path:'home',component:HomeComponent},  
-  {path:'cart',component:CartComponent},  
+  // {path:'cart',component:CartComponent},
+  
+    
+    {
+      path:'cart',
+      loadChildren:()=>import("./cart/cart.module").then((l)=>l.CartModule)
+    },
+  
 
   {
     path:'catelog',
