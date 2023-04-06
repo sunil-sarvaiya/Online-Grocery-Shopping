@@ -62,7 +62,7 @@ export class RegistrationComponent implements OnInit {
   };
 
   submit(){
-    debugger
+    // debugger
    
    let {
     fname,

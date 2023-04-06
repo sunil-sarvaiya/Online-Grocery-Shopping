@@ -1,0 +1,134 @@
+.img{
+    height: 550px;
+    width: 650px;
+    margin-top: 70px;
+    margin-left: 50px;
+    position: absolute;
+  float: left;
+  }
+  
+  .container{
+   position: absolute;
+   margin-left: 60%;
+   margin-top: -35px;
+  
+  }
+  
+  
+  
+  .button{
+      margin-left: 30%;
+      font-size: 30px;
+      margin-top: 60px;
+  }
+  
+  
+  
+  
+.social{
+    font-size: 20px;
+    letter-spacing: 25px;
+    }
+
+    
+ .social:hover{
+    color: blue;
+ }
+
+  
+  a{
+    color: black;
+}
+  
+  
+  
+  
+  
+  .login-page {
+      width: 360px;
+      padding: 8% 0 0;
+      margin-right: 20px;
+    }
+    .form {
+      height: auto;
+      max-width: 360px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0px 0px 100px red;
+    }
+    input, textarea,button{
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background:red;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #FFFFFF;
+      
+    }
+   
+    
+  ::placeholder {
+      color:white;
+      opacity: 1; /* Firefox */
+    }
+   
+  
+  
+    .secondContainer{
+  
+      margin-top: 700px;
+    }
+  .h3{
+      text-align: center;
+      margin-top: 100px;
+    
+  }
+  
+  h1{
+    text-align: center;
+  }
+  
+  .box1{
+    border: 1px solid rgb(208, 181, 181);
+    border-radius: 7px;
+    height: auto;
+    width:auto;
+    float: left;
+    margin-left: 90px;
+    margin-top: 70px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+
+   
+  
+  }
+  .box1:hover{
+    background-color: aquamarine;
+  }
+  .number{
+    color: blue;
+  }
+  
+  
+  
+  .image {
+         height: 300px;
+         width: 100%;
+         opacity: .7
+       
+      }
+  
+      .h4{
+        position: absolute;
+        margin-left: 550px;
+        margin-top: 100px;
+        font-size: 80px;
+        color: white;
+    }
+  
+  

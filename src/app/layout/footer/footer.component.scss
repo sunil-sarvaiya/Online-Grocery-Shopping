@@ -62,9 +62,6 @@ p{
    
 }
 
-.facebook:hover{
-    background-color: black;
-}
 
 .linkedin{
 
@@ -72,32 +69,48 @@ p{
 
 }
 
-.linkedin:hover{
-    background-color: black;
-    
-}
 .instagram{
 
     margin-left: 30px;
 
 }
 
-.instagram:hover{
-    background-color: black;
-}
 .twitter{
 
     margin-left: 30px;
 
 }
 
-.twitter:hover{
-    background-color: black;
-}
+
 
 .container{
     height: 150px;
     
+}
+a{
+    color: black;
+}
+
+.twitter:hover{
+    font-size: 20px;
+    color: aqua;
+}
+
+.instagram:hover{
+    font-size: 20px;
+    color: aqua;
+}
+
+.linkedin:hover{
+    font-size: 20px;
+    color: aqua;
+    
+
+}
+
+.facebook:hover{
+    font-size: 20px;
+    color: aqua;
 }
 
 

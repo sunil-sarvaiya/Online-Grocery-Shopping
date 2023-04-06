@@ -13,9 +13,8 @@
 }
 
 .secondContainer{
-    border: 1px solid black;
     height:auto;
-    padding: 4%;
+    padding: 3%;
     width: 20%;
     margin-left: 40%;
     margin-bottom: 5%;
@@ -28,4 +27,17 @@
 }
 button{
    margin: 10px;
+}
+
+.btn{
+    background-color: #2E8B57;
+    border: none;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.btn:hover{
+    background-color: #4CAF50;
+
 }

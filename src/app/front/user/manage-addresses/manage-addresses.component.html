@@ -9,3 +9,116 @@
   </div>
   <hr>
   <app-sidebar></app-sidebar>
+
+
+  
+  <!-- form -->
+
+  <div class="container">
+    <form [formGroup]="profileData">
+      <div class="row jumbotron">
+        
+
+        
+        <div class="col-sm-12 form-group mb-0">
+            <button class="btn btn-primary float-right btnn" (click)="submit(profileData.value)">Submit</button>
+          </div>
+
+        <div class="col-sm-6 form-group">
+          <label>address_line_1</label>
+          <input type="text" class="form-control" formControlName="address_line_1"   >
+          <span *ngIf="address_line_1 && address_line_1.invalid && address_line_1.touched" class="span">Please enter valid value!</span>
+        </div>
+
+
+        <div class="col-sm-6 form-group">
+          <label>address_line_2</label>
+          <input type="text" class="form-control" formControlName="address_line_2"   >
+          <span *ngIf="address_line_2 && address_line_2.invalid && address_line_2.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>area</label>
+          <input type="text" class="form-control" formControlName="area"   >
+          <span *ngIf="area && area.invalid && area.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>city</label>
+          <input type="text" class="form-control" formControlName="city"   >
+          <span *ngIf="city && city.invalid && city.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>state</label>
+          <input type="text" class="form-control" formControlName="state"   >
+          <span *ngIf="state && state.invalid && state.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>country</label>
+          <input type="text" class="form-control" formControlName="country"   >
+          <span *ngIf="country && country.invalid && country.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>postal_code</label>
+          <input type="text" class="form-control" formControlName="postal_code"   >
+          <span *ngIf="postal_code && postal_code.invalid && postal_code.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>landmark</label>
+          <input type="text" class="form-control" formControlName="landmark"   >
+          <span *ngIf="landmark && landmark.invalid && landmark.touched" class="span">Please enter valid value!</span>
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>tag</label>
+          <input type="text" class="form-control" formControlName="tag"   >
+          <span *ngIf="tag && tag.invalid && tag.touched" class="span">Please enter valid value!</span>
+        </div>
+
+
+      
+  
+      </div>
+    </form>
+  </div>
+
+<!-- 
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Default Address : Office </h5>
+          <p class="card-text">Sunil Sarvaiya <br>Ahmedabad - Gujarat <br>Phone-9327000837</p>
+          <button>Deliver Here</button> <i class="bi bi-trash"></i> <i class="bi bi-pencil-square"></i>
+      </div>
+    </div>
+
+
+  </div>
+ -->
+
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body" *ngFor="let item of addressData">
+          <h1 class="card-title">{{item.tag}} </h1>
+          <p>{{ item.address_line_1}}</p>
+          <p>{{ item.address_line_2}}</p>
+          <p>{{ item.area}}</p>
+          <p>{{ item.city}}</p>
+          <p>{{ item.state}}</p>
+          <p>{{ item.country}}</p>
+          <p>{{ item.postal_code}}</p>
+          <p>{{ item.landmark}}</p>
+          <button type="button" class="btn btn-secondary">Deliver Here</button> <i class="bi bi-trash"></i> <i class="bi bi-pencil-square"></i>
+        </div>
+      </div>
+    </div>
+  
+    

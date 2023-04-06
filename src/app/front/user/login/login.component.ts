@@ -17,6 +17,8 @@ import { login } from 'src/app/model/login';
 })
 export class LoginComponent implements OnInit {
   ngOnInit(){
+
+
   }
 
   constructor(private http:HttpClient , private router:Router, private user:FrontService){}
@@ -54,12 +56,17 @@ export class LoginComponent implements OnInit {
   };
  console.log(body);
   
- this.user.login(body).subscribe((result)=>{
+ this.user.login(body).subscribe((result:any)=>{
   console.log(result);
-  alert("login");
-  this.loginForm.reset();
-  localStorage.setItem("username",JSON.stringify(body.username)) ;
-  this.router.navigate(['/']);
+
+  if(result){
+    localStorage.setItem("userToken",result.data.token)
+    alert("login"); 
+    this.loginForm.reset();
+    localStorage.setItem("username",JSON.stringify(body.username)) ;
+    this.router.navigate(['/']);
+  }
+  
 
 
 

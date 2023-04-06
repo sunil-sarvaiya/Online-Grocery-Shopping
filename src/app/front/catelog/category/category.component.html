@@ -1,80 +1,76 @@
-
-<!-- button -->
-
-  
-  <div class="container-fluid p-0">
-    <section class="row no-gutters align-items-center">
-        <div class="col-12 text-center d-flex">
-            <img class="img-fluid image" src="assets/vag&frui.jpg">
-            <h4 class="h4"><b>Fruits and Vegetables</b></h4>
-        </div>
-    </section>
-  </div>
-  <hr>
-  
-  <!-- for filter button -->
+<!-- categories -->
   
   
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle filterButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-filter-right"></i>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item"  (click)="forFilter('Fruit')" >Fruits</a></li>
-      <li><a class="dropdown-item"  (click)="forFilter('vagetable')" >Vegetable</a></li>
-    </ul>
-  </div>
+<div class="fea-product">
+    <div>
+    <h3>Explore categories</h3>
+    </div>
+    <div class="feature btn">
+        <a href="">All</a>
+        <a href="">vegetables</a>
+        <a href="">Fruits</a>
+        <a href="">Coffe & teas</a>
+        <a href="">Meat</a>
+    </div>
+  </div><br>
   
-  <!-- main contain -->
   
-  <div Class="container" >
-    <div class="card " style="width: 18rem;" *ngFor="let data of filter">
-        <img src="{{data.img}}" class="card-img-top img" alt="..." />
-        <div class="card-body">
-            <p class="card-text"><b>Category: </b>{{data.category}}</p>
-            <p class="card-title" style="margin-top: -10px;"><b>Name: </b>{{data.name}}</p>
-            <p class="card-title"><b>Weight: </b>{{data.quantity}} gm</p>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span><br> 
-            <p style="margin-top: 10px;"><b>Price: </b> ${{data.price}}  <del>$5</del><br></p>
-            
-            <a href="#" class="btn btn-primary">Add</a>
-        
-        </div>
+  <div class="container1 centre ">
+  
+  <div class="card " style="width: 18rem;">
+    <img src="/assets/peach.jpg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Peach</h5>
+      <p class="card-text">10 iteam</p>
     </div>
   </div>
   
-  
-  
-  
-  <div Class="container" >
-    <div class="card " style="width: 18rem;" *ngFor="let data of filter">
-        <img src="{{data.img}}" class="card-img-top img" alt="..." />
-        <div class="card-body">
-            <p class="card-text"><b>Category: </b>{{data.category}}</p>
-            <p class="card-title" style="margin-top: -10px;"><b>Name: </b>{{data.name}}</p>
-            <p class="card-title"><b>Weight: </b>{{data.quantity}} gm</p>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span><br> 
-            <p style="margin-top: 10px;"><b>Price: </b> ${{data.price}}  <del>$5</del><br></p>
-            
-            <a href="#" class="btn btn-primary">Add</a>
-         
-        </div>
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/veg.jpg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">vegetables </h5>
+      <p class="card-text">10 iteams</p>
     </div>
   </div>
   
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/straberry.jpeg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">strawberry</h5>
+      <p class="card-text">10 iteams</p>
+    </div>
+  </div>
   
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/apple.jpeg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Apple</h5>
+      <p class="card-text">10 iteams</p>
+    </div>
+  </div>
   
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/orange.jpeg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Orange</h5>
+      <p class="card-text">10 iteams</p>
+    </div>
+  </div>
   
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/potato.jpeg" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">potato</h5>
+      <p class="card-text">10 iteams</p>
+    </div>
+  </div>
   
-  
-  <!-- <ul>
-  <li *ngFor="let cat of  filter">{{ cat.name }}</li>
-  </ul> -->
+  <div class="card padding" style="width: 18rem;">
+    <img src="/assets/carrot.png" class="card-img-top img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">carrot</h5>
+      <p class="card-text">10 iteams</p>
+    </div>
+  </div>
+  </div><br><br>
   

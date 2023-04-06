@@ -19,49 +19,68 @@
   <!-- form -->
 
   <div class="container">
-    <form>
+    <form [formGroup]="profileData">
       <div class="row jumbotron">
         
 
         
         <div class="col-sm-12 form-group mb-0">
-            <button class="btn btn-primary float-right btnn">Submit</button>
+            <button class="btn btn-primary float-right btnn" (click)="updateUser(profileData.value)" >Submit</button>
           </div>
 
-          
         <div class="col-sm-6 form-group">
           <label>First Name</label>
-          <input type="text" class="form-control"  >
+          <input type="text" class="form-control" formControlName="first_name"   >
+          <span *ngIf="first_name && first_name.invalid && first_name.touched" class="span">Please enter valid value!</span>
         </div>
 
         <div class="col-sm-6 form-group">
           <label>Last name</label>
-          <input type="text" class="form-control"  >
+          <input type="text" class="form-control" formControlName="last_name" >
+          <span *ngIf="last_name && last_name.invalid && last_name.touched" class="span">Please enter valid value!</span>
+
         </div>
 
         <div class="col-sm-6 form-group">
           <label>Email</label>
-          <input type="email" class="form-control" >
+          <input type="email" class="form-control" formControlName="primary_email" >
+          <span *ngIf="primary_email && primary_email.invalid && primary_email.touched" class="span">Please enter valid value!</span>
+
         </div>
 
         <div class="col-sm-6 form-group">
           <label>Contact Number </label>
-          <input type="number" class="form-control"  >
+          <input type="number" class="form-control" formControlName="primary_mobile_number" >
+          <span *ngIf="primary_mobile_number && primary_mobile_number.invalid && primary_mobile_number.touched" class="span">Please enter valid value!</span>
+
         </div>
 
         <div class="col-sm-6 form-group">
           <label>Alternate Email</label>
-          <input type="email" class="form-control"  >
+          <input type="email" class="form-control" formControlName="secondary_email" >
+          <span *ngIf="secondary_email && secondary_email.invalid && secondary_email.touched" class="span">Please enter valid value!</span>
+
         </div>
 
         <div class="col-sm-6 form-group">
           <label>Alternate Contact Number</label>
-          <input type="number" class="form-control" >
+          <input type="text" class="form-control" formControlName="secondary_mobile_number">
+          <span *ngIf="secondary_mobile_number && secondary_mobile_number.invalid && secondary_mobile_number.touched" class="span">Please enter valid value!</span>
+
         </div>
        
         <div class="col-sm-6 form-group">
           <label>Date Of Birth</label>
-          <input type="Date"  class="form-control">
+          <input type="Date"  class="form-control" formControlName="date_of_birth">
+          <span *ngIf="date_of_birth && date_of_birth.invalid && date_of_birth.touched" class="span">Please enter valid value!</span>
+
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label>Password</label>
+          <input type="password"  class="form-control" formControlName="password">
+          <span *ngIf="password && password.invalid && password.touched" class="span">Please enter valid value!</span>
+
         </div>
        
       

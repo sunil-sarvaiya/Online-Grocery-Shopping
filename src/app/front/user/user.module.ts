@@ -11,7 +11,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ManageAddressesComponent } from './manage-addresses/manage-addresses.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { LogoutComponent } from './logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -26,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     OrdersComponent,
     ManageAddressesComponent,
     ChangePasswordComponent,
-    LogoutComponent
   ],
   imports: [
     CommonModule,

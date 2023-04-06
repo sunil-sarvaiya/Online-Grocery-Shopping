@@ -23,13 +23,7 @@
     // text-align: center;
 }
 
-a:hover{
-    background-color: rgb(40, 186, 159);
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-  
-}
+
 .btn-lg{
     color: white;
     border: none;
@@ -57,6 +51,19 @@ label {
 
 .btnn{
     margin-left: 520px;
-    background-color: rgb(117, 217, 162);
+    background-color: rgb(59, 161, 105);
+    border: none;
+}
+.btnn:hover{
+    background-color: #4CAF50;
 
 }
+
+
+.span{
+    color: whitesmoke;
+    background-color: red;
+    padding: 5px 72px 5px 40px;
+    // text-align: center;
+    margin-top: 5px;
+    }

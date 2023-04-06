@@ -14,7 +14,8 @@ import { ContactUsComponent } from './shared/component/contact-us/contact-us.com
 import { ProductDetailsComponent } from './front/catelog/product-details/product-details.component';
 import { CatelogModule } from './front/catelog/catelog.module';
 import { FrontModule } from './front/front.module';
-import{ HttpClientModule } from '@angular/common/http'
+import{ HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,13 @@ import{ HttpClientModule } from '@angular/common/http'
     CatelogModule,
     FrontModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

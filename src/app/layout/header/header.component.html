@@ -33,12 +33,16 @@
         <a routerLink="/contact-us" class="btn btn-outline-success logIn">Contact Us</a>
         <a routerLink="/about-us"class="btn btn-outline-success logIn" >About Us</a>
         <a routerLink="./front/cart"class="btn btn-outline-success logIn" >My cart</a>
+        <a routerLink="./home"class="btn btn-outline-success logIn" *ngIf="ifUser" (click)="logout()">Logout</a>
+        <a routerLink="./front/user/profile"class="btn btn-outline-success logIn" *ngIf="ifUser">{{name}}</a>
+
+
         <!-- <a routerLink="/front/user/login"class="btn btn-outline-success logIn" *ngIf="showName">{{btn}}</a> -->
-        <button class="btn btn-outline-success logIn" (click)="navigate()">{{btnText}}</button>
+        <button class="btn btn-outline-success logIn" routerLink="/front/user/login" *ngIf="!ifUser">Log in</button>
+
+        <!-- //(click)="navigate()" {{btnText}}}} -->
 
         <!-- <a routerLink="/front/user/login"class="btn btn-outline-success logIn" *ngIf="!showName">{{loadData()}}</a> -->
-
-
 
 
           
@@ -61,7 +65,7 @@
 
 <div class="call ">
   
-<a routerLink="/front/catelog/category">  <button type="button" class="btn btn-primary btn-lg" ><i class="bi bi-grid"></i>Brows All Categories</button>  </a>
+<a routerLink="/front/catelog/product-list">  <button type="button" class="btn btn-primary btn-lg" ><i class="bi bi-grid"></i>Brows All Categories</button>  </a>
 <div class="call1">
     <h3><i class="bi bi-telephone"></i> 9327000837</h3>24/7 support center
 </div>

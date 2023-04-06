@@ -16,6 +16,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     CommonModule,
     CatelogRoutingModule
-  ]
+  ],
+  exports:[ CategoryComponent]
 })
 export class CatelogModule { }
