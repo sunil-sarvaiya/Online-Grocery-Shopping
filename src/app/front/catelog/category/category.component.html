@@ -14,7 +14,7 @@
     </div>
   </div><br>
   
-  
+<!--   
   <div class="container1 centre ">
   
   <div class="card " style="width: 18rem;">
@@ -73,4 +73,65 @@
     </div>
   </div>
   </div><br><br>
+   -->
+
+    <!-- <div class="carousel-cell" *ngFor="let category of catData">
+        <div class="card bg-warning-subtle p-3 m-2" >
+            <img src="{{category.image}}" alt="" width="120" height="120" [routerLink]="['/catalog/products-list/',category.id]"/>
+            <div class="card-body text-center">
+                <h4>{{category.title}}</h4>
+
+                <small>{{category.quantity}}</small>
+            </div>
+        </div>
+        
+    </div> -->
+
+  <div class="container1 centre ">
+     
+  <div class="card padding " style="width: 18rem;" *ngFor="let category of catData">
+    <img src="/assets/apple.jpeg"  class="card-img-top img" alt="..."  routerLink="/front/catelog/product-list/{{category.id}}">
+    <div class="card-body">
+      <h5 class="card-title">{{category.title}}</h5>
+      <p class="card-text">{{category.quantity}}</p>
+    </div>
+  </div>
+
   
+  </div>
+<!-- 
+  
+  <div class="container-fluid mb-4 text-center" >
+    <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+
+      <div class="col mt-4"  *ngFor="let item of catData">
+        <div class="card">
+          <h1 class="card-title">{{item.tag}} </h1>
+          <p>{{ item.address_line_1}}</p>
+          <p>{{ item.address_line_2}}</p>
+          <p>{{ item.area}}</p>
+          <p>{{ item.city}}</p>
+          <p>{{ item.state}}</p>
+          <p>{{ item.country}}</p>
+          <p>{{ item.postal_code}}</p>
+          <p>{{ item.landmark}}</p>
+           <button type="button" class="btn btn-secondary buttonClass">Deliver Here</button><br> 
+           <button type="button" class="btn btn-secondary buttonClass a"> <i class="bi bi-trash"></i></button><br> 
+           <button type="button" class="btn btn-secondary buttonClass b"> <i class="bi bi-pencil-square"></i></button> 
+          
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+ -->
+
+
+
+
+
+
+ 

@@ -8,15 +8,91 @@
   </div>
 
 
-<div class="px-4 px-lg-0">
+
+
+  
+<div class="container mt-5 my-5" *ngIf="dispalyEmplty">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <i class="fas fa-shopping-cart fa-5x mb-3"></i>
+      <h2>Your Cart is Empty</h2>
+      <p class="lead">Looks like you haven't added anything to your cart yet.</p>
+      <a routerLink="" class="btn btn-outline-primary">Continue Shopping</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="conatiner my-3">
+
+  <table class="table table-striped container" *ngIf="!dispalyEmplty">
+      <thead>
+          <tr>
+              <th scope="col">Item Description</th>
+              <th scope="col">Unit Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Sub Total</th>
+              <th scope="col">Romove</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cart of cartData;let i=index">
+              <td> <img src="{{cart.avatar_image}}" alt=""> - {{cart.title}}</td>
+              <td>{{cart.amount |currency:'INR' }} </td>
+              <td>
+                  <div>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="quantity('min',cart)">-</button>
+                      <span class="mx-2"> {{cart.quantity}} </span>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="quantity('pluse',cart)">+</button>
+                  </div>
+              </td>
+              <td>{{cart.quantity * cart.amount | currency:"INR"}}</td>
+              <td>
+                  <button class="btn" (click)="removeItem(cart)"><i type="button" class="fa-solid fa-trash"></i></button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="px-4 px-lg-0">
     
     <div class="pb-5">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+          <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5"> -->
   
             <!-- Shopping cart table -->
-            <div class="table-responsive">
+            <!-- <div class="table-responsive">
               <table class="table">
                 <thead>
                   <tr>
@@ -39,45 +115,45 @@
 
                     <th scope="col" class="border-0 bg-light">
                       <div class="py-2 text-uppercase">Remove</div>
-                    </th>
+                    </th> -->
 
-                  </tr>
+                  <!-- </tr>
                 </thead>
-                <tbody>
+                <tbody> -->
 
-                     
-                  <tr *ngFor="let item of cartData;let i=index">
+<!--                      
+                  <tr *ngFor="let cart of cartData;let i=index">
                     <th scope="row">
                       <div class="p-2">
-                        <img src="{{item.img}}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                        <img src="{{cart.avatar_image}}" alt="" width="70" class="img-fluid rounded shadow-sm">
                         <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0"><a href="#" class="text-dark d-inline-block"> {{item. name}} -  {{item.quantity}} gm</a></h5><span class="text-muted font-weight-normal font-italic">Category: {{item.category}}</span>
+                          <h5 class="mb-0"><a href="#" class="text-dark d-inline-block"> {{cart.title}} -  {{cart.quantity}}</a></h5><span class="text-muted font-weight-normal font-italic">Category: {{item.category}}</span>
                         </div>
                       </div>
-                    </th>
+                    </th> -->
 
-                    <td class="align-middle"><strong>{{item.price |currency }} </strong> </td>
+                    <!-- <td class="align-middle"><strong>{{cart.amount |currency:'INR'  }} </strong> </td> -->
 
 
-
+<!-- 
                     <td class="count"> <div>
                           
                       <button class="btn" (click)="subQuantity(item.id,i)">-</button>
                         <span>{{item.product_quantity}}</span>
                         <button class="btn" (click)="addQuantity(item.id,i)">+</button>
-                </div></td>
+                </div></td> -->
 
-
+<!-- 
                     <td class="border-0 align-middle"><strong>${{item.product_quantity * item.price}}</strong> </td>
 
-                    <td class="align-middle"> <i type="button" class="fa-solid fa-trash" (click)="delCartData(item.id)"></i>
+                    <td class="align-middle"> <i type="button" class="fa-solid fa-trash" (click)="removeItem(cart)"></i>
                     </td>
                   </tr>
                   <tr> 
+ -->
 
 
-
-
+<!-- 
                 
 
                 </tbody>
@@ -85,26 +161,31 @@
             </div>
          
           </div>
-        </div>
+        </div> -->
  
-        <div class="row py-5 p-4  rounded shadow-sm">
+        <div class="row py-5 p-4  rounded shadow-sm"  *ngIf="!dispalyEmplty">
           <div class="col-lg-6">
           </div>
           <div class="col-lg-6  ">
             <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold text-center">Order summary </div>
             <div class="p-4">
               <ul class="list-unstyled mb-4">
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>${{total()}}</strong></li>
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Delivary-Charge</strong><strong>Free</strong></li>
-                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">amount: </strong><strong>{{subtotal | currency:'INR'}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>{{text | currency:'INR'}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">delivery:</strong><strong>{{delivery | currency:'INR'}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">discount:</strong><strong>{{discount | currency:'INR'}}</strong></li>
+
+
+
                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                  <h5 class="font-weight-bold">${{total()}}</h5>
+                  <!-- <h5 class="font-weight-bold">${{total()}}</h5> -->
+                  <h5 class="font-weight-bold">{{totalPrice | currency:'INR'}}</h5>
                 </li>
               </ul><a routerLink="/front/cart/checkout" class="btn btn-primary checkout">Checkout</a>
             </div>
           </div>
         </div> 
-  
+<!--   
       </div>
     </div>
-  </div>
+  </div> -->

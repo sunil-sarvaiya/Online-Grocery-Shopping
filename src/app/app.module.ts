@@ -16,6 +16,14 @@ import { CatelogModule } from './front/catelog/catelog.module';
 import { FrontModule } from './front/front.module';
 import{ HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { AuthInterceptor } from './auth.interceptor';
+import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +34,8 @@ import { AuthInterceptor } from './auth.interceptor';
     HomeComponent,
     AboutUsComponent,
     ContactUsComponent,
+    PageNotFoundComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,19 @@ import { AuthInterceptor } from './auth.interceptor';
     FormsModule,
     ReactiveFormsModule,
     CatelogModule,
-    FrontModule
+    FrontModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true,
+    }),
+    CommonModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+   
   ],
   providers: [
     {

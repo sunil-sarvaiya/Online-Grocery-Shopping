@@ -7,3 +7,42 @@ export interface UserModel {
     username: string,
     password: string
 }
+
+export interface addProduct{
+    pName:string,
+    pCategory:string,
+    pPrice:number,
+    pDescription:string,
+    pCheck:boolean,
+    pImage:string
+    id:number,
+    quantity:undefined | number,
+    productId:number | undefined  
+}
+
+export interface cart{
+    pName:string,
+    pCategory:string,
+    pPrice:number,
+    pDescription:string,
+    pCheck:boolean,
+    pImage:string
+    id:number | undefined,
+    quantity:undefined | number,
+    userId:number,
+    productId:number |undefined
+}
+
+export interface Address {
+    address_line_1: string;
+    address_line_2: string;
+    area: string;
+    city: string;
+    state: string;
+    country: string;
+    postal_code: string;
+    landmark: string;
+    tag: string;
+    id: string
+  }
+  

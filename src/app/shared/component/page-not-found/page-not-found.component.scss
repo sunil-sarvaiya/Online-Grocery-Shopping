@@ -1,0 +1,38 @@
+
+  .error {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgb(59, 161, 105);
+    margin-top:3%;
+  }
+  
+  h1 {
+    font-size: 80px;
+    margin: 0;
+    color:rgb(59, 161, 105);
+  }
+  
+  p {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:rgb(59, 161, 105);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    background-color: #4CAF50;
+  }
+  

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UsersService } from 'src/app/shared/services/users.service';
 import { FormControl,FormGroup,Validators } from '@angular/forms';
+import { EncryptionService } from 'src/app/shared/services/encryption.service';
+import { window } from 'rxjs';
 
 @Component({
   selector: 'app-manage-addresses',
@@ -11,14 +13,17 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 export class ManageAddressesComponent implements OnInit{
 
 addressData:any=[];
-sunil:any;
+  resData: any;
+  Encryption:any;
 
-  constructor(private address:UsersService){}
+  constructor(private address:UsersService, private encryption:EncryptionService){}
   ngOnInit() {
 
     this.userData();
     
+    
   }
+  
   
   profileData = new FormGroup({
 
@@ -96,8 +101,24 @@ sunil:any;
   submit(data:any){
     this.address.addAddress(data).subscribe((res)=>{
       console.log(res);
+      // this.profileData.reset();
+      this.userData()
+
+
       
+    
+
+      this.address.updateAddress(this.Encryption,data).subscribe((res)=>{
+        console.log("update res",res);
+        this.userData()
+        // this.profileData.reset();
+      // this.profileData.reset();
+      })
+
+
     })
+      
+    
 
    
 }
@@ -110,4 +131,84 @@ userData(){
     console.log(this.addressData);
   })
 }
+
+deleteAddress(id:any){
+  console.log(id);
+  // let idString=id.toString();
+
+  // console.log(idString);
+  
+
+  this.encryption.encryptionFunction(id.toString()).subscribe((res)=>{
+    console.log(res);
+
+
+    this.address.deleteAddress(res.data).subscribe((res)=>{
+      console.log(res);
+      // alert("address deleted")
+      this.userData()
+      
+    })
+    
+  })
+
+ 
+
+}
+updateAddress(item:any){
+console.log("id",item.id);
+let addressId = item.id;
+  
+  this.encryption.encryptionFunction(addressId.toString()).subscribe((res)=>{
+    console.log("encryption res",res.data);
+    this.Encryption = res.data
+
+    if(item){
+      this.resData = item;
+      console.log(this.resData);
+      
+      this.profileData.setValue({
+        address_line_1: this.resData.address_line_1 || "",
+        address_line_2: this.resData.address_line_2 || '',
+        area:  this.resData.area || "",
+        city:  this.resData.city || "",
+        state:  this.resData.state || "",
+        country:  this.resData.country || "",
+        postal_code:  this.resData.postal_code || "",
+        landmark:  this.resData.landmark || "",
+        tag:  this.resData.tag || "",
+      })
+
+      this.userData()
+    }
+    
+
+   
+
+      
+    // if(res){
+    //   this.resData = res.data;
+    //   console.log("sunil",this.resData);
+      
+      // this.profileData.setValue({
+      //   address_line_1: this.resData.address_line_1 || "",
+      //   address_line_2: this.resData.address_line_2 || '',
+      //   area:  this.resData.area || "",
+      //   city:  this.resData.city || "",
+      //   state:  this.resData.state || "",
+      //   country:  this.resData.country || "",
+      //   postal_code:  this.resData.postal_code || "",
+      //   landmark:  this.resData.landmark || "",
+      //   tag:  this.resData.tag || "",
+      // })
+
+    // }
+    
+    // })
+  
+
+  })
+
+}
+
 }

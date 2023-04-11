@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FrontService } from 'src/app/shared/services/front.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 
 @Component({
@@ -9,12 +10,14 @@ import { FrontService } from 'src/app/shared/services/front.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  name:any | null;
+name:any | null;
 showName:any=true;
 ifUser = false;
 btnText:string="Log in";
-userLoggedIn:boolean=false
-constructor(private router :Router, private user:FrontService){
+userLoggedIn:boolean=false;
+cartItems = 0;
+
+constructor(private router :Router, private user:FrontService, private cart:CartService){
   let data = localStorage.getItem('username');
   if(data){
     this.btnText=JSON.parse(data);
@@ -30,7 +33,7 @@ constructor(private router :Router, private user:FrontService){
   ngOnInit() {
     this.checkUser()
 
-
+this.getCartItemLength();
 
 
    let user = localStorage.getItem('username')
@@ -62,6 +65,21 @@ checkUser(){
 
 logout(){
   this.user.logout()
+}
+
+
+getCartItemLength(){
+  let cartData=localStorage.getItem('localCart');
+  if(cartData){
+    this.cartItems = JSON.parse(cartData).length;
+  }
+
+  this.cart.getCartLength.subscribe((res)=>{
+    this.cartItems=res.length
+  })
+
+
+
 }
 
 }

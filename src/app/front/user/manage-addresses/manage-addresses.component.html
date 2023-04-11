@@ -103,8 +103,8 @@
 
 
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
+  <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row">
       <div class="card">
         <div class="card-body" *ngFor="let item of addressData">
           <h1 class="card-title">{{item.tag}} </h1>
@@ -121,4 +121,38 @@
       </div>
     </div>
   
+     -->
+
     
+     <div class="container-fluid mb-4 text-center" >
+      <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+
+        <div class="col mt-4"  *ngFor="let item of addressData">
+          <div class="card">
+            <h1 class="card-title">{{item.tag}} </h1>
+            <p>{{ item.address_line_1}}</p>
+            <p>{{ item.address_line_2}}</p>
+            <p>{{ item.area}}</p>
+            <p>{{ item.city}}</p>
+            <p>{{ item.state}}</p>
+            <p>{{ item.country}}</p>
+            <p>{{ item.postal_code}}</p>
+            <p>{{ item.landmark}}</p>
+            <!-- <button type="button" class="btn btn-secondary buttonClass">Deliver Here</button><br> -->
+            <!-- <button type="button" class="btn btn-secondary buttonClass a"> <i class="bi bi-trash"></i></button><br> -->
+            <!-- <button type="button" class="btn btn-secondary buttonClass b"> <i class="bi bi-pencil-square"></i></button> -->
+            
+            <button>Deliver Here</button>
+            <!-- <button (click)="editAddress(item)">edit</button> -->
+
+            <button (click)="deleteAddress(item.id) "> <i class="bi bi-trash"> </i></button>
+            <!-- <button  (click)="showData(item.id)">show data</button> -->
+            <button (click)="updateAddress(item)"><i class="bi bi-pencil-square"></i></button>
+
+          </div>
+        </div>
+  
+        
+      </div>
+    </div>

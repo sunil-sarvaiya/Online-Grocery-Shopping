@@ -7,6 +7,7 @@ import { FrontService } from 'src/app/shared/services/front.service';
 import { compileNgModule } from '@angular/compiler';
 import { UserModel } from 'src/app/model/user-model';
 import { login } from 'src/app/model/login';
+import { ToastrService } from 'ngx-toastr/public_api';
 
 
 

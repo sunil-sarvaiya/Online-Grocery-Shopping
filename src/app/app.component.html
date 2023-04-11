@@ -1,4 +1,10 @@
-<app-header></app-header>
+<ngx-ui-loader text="please wait...." ></ngx-ui-loader>
+
+
+<div ngxUiLoaderBlurred (blur)="1000">
+    <app-header></app-header>
 <!-- <app-home></app-home> -->
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+
+  </div>

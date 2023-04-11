@@ -15,7 +15,7 @@ const routes: Routes = [
     {
       path:'cart',
       loadChildren:()=>import("./cart/cart.module").then((l)=>l.CartModule),
-      canActivate:[AuthGuard]
+      // canActivate:[AuthGuard]
     },
   
 

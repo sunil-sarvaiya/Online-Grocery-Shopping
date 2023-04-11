@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/shared/services/products.service';
 import { CategoryComponent } from 'src/app/front/catelog/category/category.component';
 
@@ -7,14 +7,18 @@ import { CategoryComponent } from 'src/app/front/catelog/category/category.compo
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   product:any;
   constructor(private products:ProductsService){
     // console.log("userdata",products.products());
     
 
-this.product=products.getProducts();    
+this.product=products.getProduct();    
+  }
+  ngOnInit() {
+    window.scrollBy(0, 0);
+
   }
 
   

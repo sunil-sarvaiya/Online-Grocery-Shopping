@@ -20,8 +20,12 @@ const routes: Routes = [
         component:ProductListComponent
       },
       {
-        path:'product-details/:name',
+        path:'product-details/:productId',
         component:ProductDetailsComponent
+      },
+      {
+        path:'product-list/:name',
+        component:ProductListComponent
       },
       // { path: 'profile', component: ProfileComponent },
       // {path:'order',component:OrdersComponent},
